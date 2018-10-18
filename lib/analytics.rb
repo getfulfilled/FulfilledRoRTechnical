@@ -1,5 +1,5 @@
 module Analytics
-  def self.event(event, value, event_time = nil)
-    Analytic.create(event: event, value: value, event_time: event_time || Time.now)
+  def self.event(data)
+    Analytic.create(event: data[0], value: data[1], event_time: data[2] || Time.now)
   end
 end
