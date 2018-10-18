@@ -21,6 +21,13 @@
     <%= form.text_field :isbn %>
   </div>
 
+  <div class="field">
+    <%= form.fields_for :author do |a| %>
+      <%= a.label 'author name' %>
+      <%= a.text_field :name %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
